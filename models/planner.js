@@ -1,13 +1,13 @@
 const Sequelize = require("sequelize");
 // 플레너(플레너id, pw, name, phone)
-class User extends Sequelize.Model {
+class Planner extends Sequelize.Model {
     static initiate(sequelize) {
-    User.init({
+    Planner.init({
         id: {
             type: Sequelize.STRING(20),
             primaryKey: true,
             allowNull: false,
-            comment: "유저 ID (기본키)",
+            comment: "플레너 ID (기본키)",
         },
         pwd: {
             type: Sequelize.STRING(20),
@@ -24,38 +24,18 @@ class User extends Sequelize.Model {
             allowNull: false,
             comment: "회원 전화번호",
         },
-        birth:{
-            type:Sequelize.STRING(20),
-            allowNull:false,
-            comment:"생일"
-        },
-        gender:{
-            type:Sequelize.STRING(20),
-            allowNull:false,
-            comment:"성별",
-        },
-        companionName:{
-            type:Sequelize.STRING(20),
-            allowNull:false,
-            comment:"배우자 이름",
-        },
-        companionPhone:{
-            type:Sequelize.STRING(20),
-            allowNull:false,
-            comment:"배우자 전화번호"
-        },
         regdate: {
             type: Sequelize.DATE,
             allowNull: false,
             defaultValue: Sequelize.NOW,
-            comment: "회원 가입일",
+            comment: "플레너 회원 가입일",
         },
         }, {
         sequelize,
         timestamps: false,
         underscored: false,
-        modelName: 'User',
-        tableName: 'users',
+        modelName: 'Planner',
+        tableName: 'planners',
         paranoid: false,
         charset: 'utf8',
         collate: 'utf8_general_ci',
@@ -67,7 +47,8 @@ class User extends Sequelize.Model {
         // db.User.hasMany(db.Pay, { foreignKey: 'userId', sourceKey: 'id'});//pay태이블로 보냄 hasMany 가 보낸다 라는뜻
         // db.User.hasMany(db.PlayHistory, { foreignKey: 'userId', sourceKey: 'id'});
         // db.User.hasMany(db.PlayList, { foreignKey: 'userId', sourceKey: 'id'});
+
     }
 };
 
-module.exports = User;
+module.exports = Planner;
