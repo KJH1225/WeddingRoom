@@ -8,7 +8,6 @@ const MapComponent = (props) => {
   const position = [37.5115, 127.0821];
 
 
-
   return (
     <div className="map-container"> {/* 추가된 부분 */}
       <MapContainer center={position} zoom={130} className="MapContainer">

@@ -1,12 +1,16 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Wedding.scss';
-import MapWithRealtimeLocation from '../../components/Map/Map'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import {NavLink, useParams} from 'react-router-dom';
+import Jamsil_m from '../../components/KakaoMap/Jamsil_map';
+import Banpo_m from '../../components/KakaoMap/Banpo_map';
+import Pyeongtaek_m from '../../components/KakaoMap/Pyeongtaek_map';
+import Seolleung_m from '../../components/KakaoMap/Seolleung_map';
+import Gongdeog_m from '../../components/KakaoMap/Gongdeog_map';
 
 
 function Wedding() {
@@ -54,6 +58,7 @@ function Wedding() {
         footer_text_05_span02: "강동, 강북 방면",
         footer_text_05_03: "- 강변북로&올림픽대로 (잠실대교방면) {'>'} 잠실대교 남단 잠실나루역 방향 (좌회전) {'>'} 한국광고문화회관\n",
         footer_text_05_span03: "강서 방향",
+        map: <Jamsil_m/>
       }
       break;
     case "2":
@@ -92,7 +97,8 @@ function Wedding() {
         footer_text_05_02: "",
         footer_text_05_span02: "",
         footer_text_05_03: "",
-        footer_text_05_span03:""
+        footer_text_05_span03:"",
+        map: <Banpo_m/>
       }
       break;
     case "3":
@@ -131,7 +137,8 @@ function Wedding() {
         footer_text_05_02: "",
         footer_text_05_span02: "",
         footer_text_05_03: "",
-        footer_text_05_span03:""
+        footer_text_05_span03:"",
+        map: <Pyeongtaek_m/>
       }
       break;
       case "4":
@@ -170,7 +177,8 @@ function Wedding() {
         footer_text_05_02: "",
         footer_text_05_span02: "",
         footer_text_05_03: "",
-        footer_text_05_span03:""
+        footer_text_05_span03:"",
+        map: <Seolleung_m/>
       }
       break;
     case "5":
@@ -209,7 +217,8 @@ function Wedding() {
         footer_text_05_02: "대흥역(서강대 앞) 방면 진입 > 공덕오거리 방향 직진 > 공덕오거리 교차로 직진 > S-OIL 건물 끼고 우회전 > 첫 번째 교차로 좌회전 > 공덕역 10번 출구 앞 건물 입구",
         footer_text_05_span02: "신촌 방향 진입 시",
         footer_text_05_03: "아현 교차로에서 마포대로 진입(공덕오거리 방향) > 공덕오거리 지나 바로 P 턴 > 공덕오거리 교차로 직진 > S-OIL 건물 끼고 우회전 > 첫 번째 교차로 좌회전 > 공덕역 10번 출구 앞 건물 입구",
-        footer_text_05_span03:"아현 교차로-애오개역 방향 진입 시"
+        footer_text_05_span03:"아현 교차로-애오개역 방향 진입 시",
+        map: <Gongdeog_m/>
       }
       break;
     default:
@@ -355,7 +364,7 @@ function Wedding() {
           </div>
           <div class="map_area">
             <div class="map">
-            <MapWithRealtimeLocation/>
+            {weddings.map}
             </div>
             <div class="map_btn">
               <a href="/" class="btn_down">약도 다운로드</a>

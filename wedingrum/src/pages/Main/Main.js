@@ -25,8 +25,6 @@ const Main = () => {
     };
   },);
 
-
-
   return (
     <>
       <div className="bg-video">
