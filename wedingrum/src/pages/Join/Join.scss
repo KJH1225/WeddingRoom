@@ -4,8 +4,8 @@
     display: block;
     text-align: center;
     margin: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
     li{
         list-style-type: none;
     }
@@ -42,6 +42,7 @@
         border-radius: 50px;
         font-size: 20px;
         transition: 0.3s;
+        margin-top: 2vw;
     }
     #join-btn:hover{
         background-color: #424242;

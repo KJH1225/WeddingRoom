@@ -1,14 +1,17 @@
 import "../Party/Party.scss"
 import React from "react"
-
+import Swiper from "../../components/Swiper/Swiper";
+import Multi from "../../components/Mcarousel/Mcarousel";
+import Vswiper from "../../components/Vswiper/Vswiper";
+import { NavLink } from "react-router-dom";
 
 const Party = () => {
   return (
-    <div id="container">
-    <div className="sub_inner">
+    <div id="Pcontainer">
+    <div className="Psub_inner">
       <div className="party_main">
         <div className="party_main_img">
-         <img src="img//Party/ex2.jpg"></img>
+          <img src="img//Party/ex2.jpg"></img>
         </div>
         <div className="party_main_txt">          
           <h3>PARTY</h3>
@@ -20,55 +23,59 @@ const Party = () => {
         <p>엄선한 제철 재료로 한식, 중식, 양식, 일식을 넘나드는 조화로운 메뉴 구성을 완성했습니다.<br></br>더채플이 전하는 미식의 감동은 모든 이의 기대와 취향을 충족시키기에 충분합니다.
         </p>
         <h3>"Savor the Culinary Delights"<br></br>최상급 미식은 이제 완벽한 연회의 기본입니다.</h3>
-        <div className="btn_wrap">
-          <button class="ui_button">연회&대관 문의</button>
+        <div className="partybtn_wrap">
+          <button class="party_button">연회&대관 문의</button>
         </div>
       </div>
-      <div className="sub_gallery_wrap">
-        <div className="gallery_left">
-          <img src="img/Party/ex2.jpg"></img>
+      <div className="party_gallery_wrap">
+        <div className="pgallery_left">
+          <Swiper></Swiper>
         </div>
-        <div className="gallery_right">
-          <h2>Gallery of\nBanquet</h2>
+        <div className="pgallery_right">
+          <h2>Gallery of<br></br>Banquet</h2>
           <p>성공과 행복을 기원하는 맛있는 연회도<br></br>더채플에서 즐겨보세요</p>
-          <div className="right_tab">
-            <a>잠실점</a>
-            <a>잠실점</a>
-            <a>잠실점</a>
-            <a>잠실점</a>
-            <a>잠실점</a>
-            <a>잠실점</a>
-            <a>잠실점</a>
+          <div className="pright_tab">
+            <a className="ht">잠실점</a>
+            <a className="ht">반포점</a>
+            <a className="ht">광화문점</a>
+            <a className="ht">선릉점</a>
+            <a className="ht">공덕점</a>
+            <a className="lt">6F 연회홀</a>
+            <a className="lt">7F 연회홀</a>
           </div>
         </div>
-        <div className="info">
-          <div className="info_text">
+        <div className="partyinfo">
+          <div className="pinfo_text">
             <h2>Information</h2>
             <p>코코넛 원목으로 조성한 연회홀은 고급 리조트를 연상시키는 공간입니다<br></br>
               원목 파티션은 편안하고 아늑한 분위기를 선사하며, 곳곳의 석재 장식물은 이국적이면서<br></br>
               고급스러운 느낌을 더해 줍니다.
             </p>
           </div>
-          image
+          <div className="Multi">
+            <Multi></Multi>
+          </div>
         </div>
       </div>
       <div className="party_menu_wrap">
         <div className="party_menu">
-          <div className="menu_ex">
+          <div className="pmenu_ex">
             <h1>Banquet Food</h1>
             <p>파인다이닝 스타 셰프들로 구성되어 더채플만의 고유한<br></br>
               메뉴들과 조찬, 뷔페식, 파티 등 행사에 따른 다양한 음식들을<br></br>
               고품격으로 만나보실 수 있습니다.
             </p>
-          </div>
-          <div className="menu_tab">
-            <a>Buffet</a>
-            <a>Buffet</a>
-            <a>Buffet</a>
-            <a>Buffet</a>
-          </div>
+            <div className="pmenu_tab">
+              <a>Buffet<br></br></a>
+              <a>Course<br></br></a>
+              <a>Finger Food<br></br></a>
+              <a>Coffee & Tea Reception<br></br></a>
+            </div>
+          </div>          
         </div>
-        image
+        <div className="Vswiper">
+          <Vswiper></Vswiper>
+        </div>
       </div>
     </div>
   </div>

@@ -38,7 +38,7 @@ function useAsync(callback, deps = []) {
         dispatch({type: "LOADING"});
         try {
             const data = await callback(); //callback은 getProduct()
-            console.log("어싱크data: ", data);
+            // console.log("어싱크data: ", data);
             dispatch({
                 type: "SUCCESS",
                 data: data

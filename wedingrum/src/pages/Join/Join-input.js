@@ -23,7 +23,7 @@ const Joininput = () => {
 
         if(true){
             console.log("g c c : ",gender, companionName, companionPhone);
-            await axios.post(`${API_URL}/user`,{name, id, pwd, phone, birth, gender, companionName, companionPhone})
+            await axios.post(`${API_URL}/user/join`,{name, id, pwd, phone, birth, gender, companionName, companionPhone})
             .then(() =>{
                 alert("가입성공!");
                 navigate('/');  
@@ -35,10 +35,6 @@ const Joininput = () => {
             return alert("전부 입력해주세요");
         }
     };
-
-
-
-
 
     return (
 <form id="join-input-form" onSubmit={onsubmitJoin} >

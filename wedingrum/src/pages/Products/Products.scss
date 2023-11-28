@@ -13,6 +13,7 @@
 
     h1 {
       font-size: 2.5rem;
+      color: white;
     }
 
     h2 {
@@ -82,11 +83,16 @@
   justify-content: space-between;
   margin: 0.5% auto;
 
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
   .photo-card {
     margin: 0.5%;
     text-align: center;
     padding-bottom: 2vw;
-    // overflow: hidden;
+    overflow: hidden;
 
     img {
       width: 25vw;
@@ -97,6 +103,10 @@
     .card-details {
       padding: 0.3vw;
       margin-top: 0.4vw;
+      
+      span{
+        color: #ad5656;
+      }
 
       h3 {
         padding-bottom: 0.4vw;
@@ -132,7 +142,9 @@
   
     .image-overlay {
       position: absolute;
+      top: 70%;
       left: 0;
+      top: 70%;
       width: 100%;
       display: flex;
       justify-content: start;
@@ -160,7 +172,8 @@
       }
   
       &.active {
-        border-color: red;
+        border: 1px solid red;
+        // border-color: red;
       }
   
       &:hover {
@@ -182,14 +195,23 @@
     }
 
     .list-button {
-      border: none;
+      padding: 5px;
+      border: 1px solid black;
       background: none;
       cursor: pointer;
-    
+      border-radius: 30px;
       &:hover {
-        svg {
+        svg, span{
           color: gray;
         }
+        border-color: gray;
+      }
+      span{
+        vertical-align:middle;
+        font-size: 13px;
+      }
+      svg{
+        vertical-align:middle;
       }
     }
     
@@ -237,7 +259,8 @@
         width: 30%;
         text-align: right;
         float: right;
-        font-size: 2rem;
+        color: #ad5656;
+        font-size: 1.5rem;
       }
     }
   }

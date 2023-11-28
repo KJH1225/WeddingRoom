@@ -1,7 +1,3 @@
-//첫번째 박스
-.exp-1{
-  box-sizing: border-box;
-}
 //첫번째박스 메인 백그라운드
 .exp3-imagg{
   background: url(../../../../public/image/Exp/Exp3/bride-1255520_1920.jpg) 50%;
@@ -35,6 +31,7 @@
 //두번째 박스
 .exp3-2{
   position: relative;
+  text-align: center;
 } 
 //두번째박스 li 위치조절
 .exp3-2 li{
@@ -56,46 +53,6 @@
 .exp3-2 ul li:nth-child(4) a{
   color: #Ad5656;
 }
-//가운데 글씨박스
-.exp-22 h3{
-  color: #Ad5656;
-  // font-weight: 500;
-  margin-top: 70px;
-}
-//스트롱 크기조절
-.exp-22 strong {
-  font-size: 49px;
-  font-weight: 400;
-}
-
-
-//세번째 박스
-.exp-3{
-  width: 100%;
-  position: relative;
-    padding: 2vw 0 2vw 20vw;
-    margin: 4vw 0 0 0;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-
-
-//세번째박스 텍스트 왼쪽
-.exp-3-1{
-  text-align: left;
-}
-//h2사이즈조절
-.exp-3-1 h2{
-  font-size: 38px;
-  font-weight: 300;
-}
-//p태그 크기조절
-.exp-3-1 p{
-  font-size: 15px;
-}
-
-
 
 //세번째 박스안에 이미지
 .exp3-3-imagg2{
@@ -108,69 +65,4 @@
 
 
 
-//세번째 박스안에 h2
-.exp-3-2 h2{
-  text-align: left;
-  padding: 2.5vw 0 1vw;
-  font-size: 38px;
-  font-weight: 300;
-  margin: 0;
-  
-}
 
-
-
-//세번째 박스안에 세번째 박스
-.exp1-3-3{
- text-align: left;
- line-height: 2;
-}
-//ul 리스트스타일 제거 위치조절
-.exp1-3-3 ul{
-  display: flex;
-  list-style: none;
-  padding: 30px 0;
-}
-//마진 오른쪽
-.exp1-3-3 li img{
-  margin-right: 50px;
-  // max-width: 100%;
-  box-sizing: border-box;
-  
-}
-//세번째박스 첫번째 이미지 조절
-.exp1-3-3 li:nth-child(1) img{
-  width: 430px;
-  height: 370px;
-  
-}
-//세번째박스 두번째 이미지 조절
-.exp1-3-3 li:nth-child(2) img{
-  width: 470px;
-  height: 520px;
-  
-  
-}
-//세번째박스 세번째 이미지 조절
-.exp1-3-3 li:nth-child(3) img{
-  width: 430px;
-  height: 370px;
-
-}
-//h3크기
-.exp1-3-3-1 h3{
-  font-size: 20px;
-}
-
-//보드로 색주기
-.exp-bod{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    background: #f5f0ef;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    
-}

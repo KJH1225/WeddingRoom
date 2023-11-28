@@ -2,15 +2,15 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 
 
-function MyPageTop() {
-  
+function MyPageTop(props) {
+  console.log("MypageTop.js/props: ", props);
   return(
     <>
       <div className='my-wadding'>
         <h1>MY WEDDING</h1>
       </div>
       <div className='my-info'>
-        <span><strong>임헌성</strong>님 반갑습니다.</span>
+        <span><strong>{props.name}</strong>님 반갑습니다.</span>
       </div>
       <div className='sub-info'>
         <div className='sub-tab'>

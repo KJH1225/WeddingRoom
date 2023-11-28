@@ -1,22 +1,23 @@
-.container{
+.Pcontainer{
   position: relative;
   margin: 0 auto;
   padding: 0;
   z-index: 5;
   overflow: hidden;
   width: 1152px;
+  h1{
+    font-size: 45px;
+    font-weight: 400;
+  }
+  p{
+    font-weight: 200;
+  }
 }
 // h1, h2, h3, p, b, a{
 //   white-space: pre-line;
 // }
-h1{
-  font-size: 45px;
-  font-weight: 400;
-}
-p{
-  font-weight: 200;
-}
-#sub_inner{
+
+.Psub_inner{
   position: relative;
 }
 .party_main{
@@ -35,19 +36,21 @@ p{
 }
 .party_main_txt{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 45%;
   transform: (-50%, -50%);
   text-align: center;
   color: #fff;
+  h1{
+    font-size: 60px;
+  }
+  h3{
+    font-size: 32px;
+    line-height: 1;
+    color: #fff;
+  }
 }
-.party_main_txt h1{
-  font-size: 60px;
-}
-.party_main_txt h3{
-  font-size: 32px;
-  line-height: 1;
-}
+
 .party_ex{
   position: relative;
   text-align: center;
@@ -57,19 +60,93 @@ p{
 .party_ex h3{
   color: #ad5656;
 }
-.ui_button{
-  padding: 5px;
-  border-radius: 15px;
+.party_button{
+  padding: 0 30px;
+  height: 38px;
+  border-radius: 50px;
+  border: 1px solid #424242;
 }
-.ui_button:hover{
-  background-color: gray;
+.party_button:hover{
+  background-color: #424242;
   color: white;
 }
-.gallery_left{
-  width: 70%;
+.pgallery_left{
+  margin-top: 50px;
   position: relative;
+  box-sizing: border-box;
+  width: 80%;
+  left: 10%;
 }
-.gallery_right{
-  width: 30%;
+.pgallery_right{
+  text-align: center;
+  width: 100%;
   position: relative;
+  margin: 0 auto;
+  h2{
+    font-size: 40px;
+    padding: 0 0 20px;
+    font-weight: lighter;
+  }
+}
+.partyinfo{
+  .pinfo_text{
+    h2{
+      font-size: 40px;
+      font-weight: lighter;
+      margin-bottom: 20px;
+    }
+    p{
+      line-height: 1.8;
+      margin-bottom: 60px;
+    }
+  }
+}
+.Multi{
+  margin-bottom: 150px;
+}
+.pright_tab{
+  margin-top: 40px;
+  margin-bottom: 80px;
+  .ht{
+    padding-right: 20px;
+    text-decoration-line: underline;
+    font-weight: bold;
+  }
+  .lt{
+    padding-right: 20px;
+    font-size: 0.9em;
+  }
+}
+
+.pmenu_ex{
+  position: relative;
+  text-align: left;
+  left: 80px;
+  width: 50%;
+  float: left;
+  h1{
+    margin-bottom: 20px;
+  }
+  p{
+    line-height: 1.8;
+  }
+  .pmenu_tab{
+    float: left;
+    
+    a{
+      font-size: 24px;
+      line-height: 110px;
+      border-bottom: 1px solid black;
+    }
+  }
+}
+.pmenu_tab a:hover{
+  color: #ad5656;
+}
+
+.Vswiper{
+  position: relative;
+  width: 50%;
+  height: 600px;
+  float: left;
 }

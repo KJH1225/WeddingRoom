@@ -1,39 +1,78 @@
-//첫번째 박스
+//Exp 메인박스 첫번째박스
 .exp-1{
   box-sizing: border-box;
-}
-//첫번째박스 메인 백그라운드
-.exp-imagg{
-  background: url(../../../../public/image/Exp/Exp/couple-1850073_1920.jpg) 50%;
-  height: 100vh;
-  background-size: cover;
-  position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
-}
-//이미지 안에 글씨색
-.exp-imagg1{
-  color: white;
-}
-//이미지안에 h3사이즈
-.exp-imagg1 h3{
-  font-size: 39px;
-  font-weight: 300;
-  margin: 0;
-   
-}
-//이미지안에 h1
-.exp-imagg1 h1{
-  font-size: 56px;
-  font-weight: 500;
-  margin: 0;
-}
+  text-align: center;
+  white-space: pre-wrap;
+  line-height: 2;
 
+  //첫번째박스 메인 백그라운드
+  .exp-imagg{
+    background: url(../../../../public/image/Exp/Exp/couple-1850073_1920.jpg) 50%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-attachment: fixed;
+  }
+  //이미지 안에 글씨색
+  .exp-imagg1{
+    color: white;
+  }
+  //이미지안에 h3사이즈
+  .exp-imagg1 h3{
+    font-size: 39px;
+    font-weight: 300;
+    margin: 0;
+    
+  }
+  //이미지안에 h1
+  .exp-imagg1 h1{
+    font-size: 56px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  //두번째 박스
+  .exp-2{
+    position: relative;
+  } 
+  //두번째박스 li 위치조절
+  .exp-2 li{
+    display: inline-block;
+    padding: 25px;
+  }
+  //두번째박스 a태그 글씨조절
+  .exp-2 li a{
+    color: #242322;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  //클릭했을때 색변경
+  .exp-2 li a:hover{
+    color: #Ad5656;
+  }
+  //첫번째 a태그 색변경
+  .exp-2 ul li:nth-child(1) a{
+    color: #Ad5656;
+  }
+  //가운데 글씨박스
+  .exp-22 h3{
+    color: #Ad5656;
+    // font-weight: 500;
+    margin-top: 70px;
+  }
+  //스트롱 크기조절
+  .exp-22 strong {
+    font-size: 55px;
+    font-weight: 400;
+   line-height: 1.5;
+  }
 //두번째 박스
 .exp-2{
   position: relative;
+  text-align: center;
 } 
 //두번째박스 li 위치조절
 .exp-2 li{
@@ -55,6 +94,10 @@
 .exp-2 ul li:nth-child(1) a{
   color: #Ad5656;
 }
+
+.exp-22 {
+  text-align: center;
+}
 //가운데 글씨박스
 .exp-22 h3{
   color: #Ad5656;
@@ -68,83 +111,93 @@
 }
 
 
-//세번째 박스
-.exp-3{
-  width: 100%;
-  position: relative;
-    padding: 2vw 0 2vw 20vw;
-    margin: 4vw 0 0 0;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-
-
-//세번째박스 텍스트 왼쪽
-.exp-3-1{
-  text-align: left;
-}
-//h2사이즈조절
-.exp-3-1 h2{
-  font-size: 38px;
-  font-weight: 300;
-}
-//p태그 크기조절
-.exp-3-1 p{
-  font-size: 15px;
-}
-
-
-
-//세번째 박스안에 이미지 
-.exp-3-imagg2{
-  height: 750px;
-  background: url(../../../../public/image/Exp/Exp/balloons-1046658_1280.jpg) top no-repeat;
-  background-size: cover;
-  margin-top: 80px;
-}
-
-
-
-
-//세번째 박스안에 h2
-.exp-3-2 h2{
-  text-align: left;
-  padding: 2.5vw 0 1vw;
-  font-size: 38px;
-  font-weight: 300;
-  margin: 0;
-  
-}
-
-//세번째 박스안에 세번째 박스
-.exp-3-3{
- text-align: left;
- line-height: 2;
-}
-//ul 리스트스타일 제거 위치조절
-.exp-3-3 ul{
-  display: flex;
-  list-style: none;
-  padding: 30px 0;
-}
-//마진 오른쪽
-.exp-3-3 li img{
-  margin-right: 50px;
-}
-//h3크기
-.exp-3-3-1 h3{
-  font-size: 20px;
-}
-
-//보드로 색주기
-.exp-bod{
-    content: "";
-    position: absolute;
+  //세번째 박스
+  .exp-3{
     width: 100%;
-    height: 25%;
-    background: #f5f0ef;
-    left: 0;
-    top: 0;
-    z-index: -1;
+    position: relative;
+      padding: 2vw 0 2vw 20vw;
+      margin: 4vw 0 0 0;
+      overflow: hidden;
+      box-sizing: border-box;
+  }
+
+
+
+  //세번째박스 텍스트 왼쪽
+  .exp-3-1{
+    text-align: left;
+  }
+  //h2사이즈조절
+  .exp-3-1 h2{
+    font-size: 38px;
+    font-weight: 300;
+    margin-top: 30px;
+
+  }
+  //p태그 크기조절
+  .exp-3-1 p{
+    font-size: 15px;
+    margin-top: 70px;
+  }
+
+
+
+  //세번째 박스안에 이미지 
+  .exp-3-imagg2{
+    height: 750px;
+    background: url(../../../../public/image/Exp/Exp/balloons-1046658_1280.jpg) top no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+  }
+
+
+
+
+  //세번째 박스안에 h2
+  .exp-3-2 h2{
+    text-align: left;
+    padding: 2.5vw 0 1vw;
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0;
+    
+  }
+
+  //세번째 박스안에 세번째 박스
+  .exp-3-3{
+  text-align: left;
+  line-height: 2;
+  }
+  //ul 리스트스타일 제거 위치조절
+  .exp-3-3 ul{
+    display: flex;
+    list-style: none;
+    padding: 30px 0;
+
+  }
+  //h3사이즈조절
+  .exp-3-3 h3{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  //마진 오른쪽
+  .exp-3-3 li img{
+    margin-right: 50px;
+    max-width: 90%;
+
+  }
+  //h3크기
+
+  //보드로 색주기
+  .exp-bod{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 25%;
+      background: #f5f0ef;
+      left: 0;
+      top: 0;
+      z-index: -1;
+  }
 }

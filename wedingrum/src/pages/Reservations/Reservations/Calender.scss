@@ -1,0 +1,53 @@
+// styles.scss
+
+.two-calendars-container {
+  display: flex;
+  justify-content: space-between;
+
+
+  .calendar-container {
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 20vw; 
+    height: 40vh;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+
+    span{
+      color: white;
+      font-size: 20px;
+    }
+
+    button{
+      color: white;
+      font-size: 17px;
+      margin: 3px;
+    }
+
+    .MuiCalendarToolbar-root {
+      background-color: #f0f0f0; // 툴바 배경색
+    }
+
+    .MuiCalendarHeader-switchHeader {
+      color: #333; // 달력 헤더의 색상
+    }
+
+    .MuiPickersCalendar-transitionContainer {
+      background-color: #353535; // 달력 배경색
+    }
+
+    .MuiPickersDay-day  {
+      color: #ffffff; // 달력 날짜의 폰트 색상
+    }
+
+    .MuiPickersDay-dayDisabled {
+      color: #ccc; // 비활성화된 날짜의 폰트 색상
+    }
+
+    .MuiPickersDay-daySelected {
+      background-color: #4caf50; // 선택된 날짜의 배경색
+      color: #fff; // 선택된 날짜의 폰트 색상
+    }
+  }
+}

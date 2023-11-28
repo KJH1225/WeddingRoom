@@ -3,8 +3,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../Map/Map.scss'; 
 
-const MapComponent = () => {
+const MapComponent = (props) => {
+  //객체로 넘겨줘서 {position: [37.5115, 127.0821], markerPopup: "잠실입니다"} 이런식으로 사용하기 
   const position = [37.5115, 127.0821];
+
+
 
   return (
     <div className="map-container"> {/* 추가된 부분 */}

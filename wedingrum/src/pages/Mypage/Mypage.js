@@ -2,9 +2,18 @@ import React, { useState } from 'react';
 import '../Mypage/Mypage.scss';
 import LeftBar from '../../components/MyPage/LeftBar';
 import MyPageTop from '../../components/MyPage/MyPageTop';
-import { TextField, Button, Container, Typography, Box } from '@mui/material';
+import { TextField, Button, Container, Box } from '@mui/material';
+import axios from 'axios';
+import { API_URL } from '../../config/contansts';
+import useAsync from '../../hooks/useAsync';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from "recoil";
+import { loginState } from "../../recoil/atoms/loginState";
 
 function MyPage() {
+  console.log('마이페이지 실행됨');
+  const navigate = useNavigate();
+  const [isLogin, setIsLogin] = useRecoilState(loginState); //useState와 거의 비슷한 사용법
   const [selectedMenuItem, setSelectedMenuItem] = useState('내 정보');
   const [formData, setFormData] = useState({
     id: '',
@@ -12,6 +21,33 @@ function MyPage() {
     confirmPassword: '',
     email: '',
   });
+  const getUser = async () =>{
+    console.log("Mypage.js/getUser()들어옴");
+    const user = await axios.get(`${API_URL}/user/mypage`);
+    console.log("Mypage.js/getUser(): ", user.status);
+    return user.data;
+  }
+  
+  const [state] = useAsync(getUser, []);
+  const { loading, data:profile, error} = state; //state구조분해 
+  if(loading) return <div>로딩중 ......</div>
+  if(error) { 
+    alert('다시 로그인 해주세요');
+    setIsLogin(false);
+    navigate('/login');
+    return <div>에러가 발생했습니다.</div> 
+  }
+  if(!profile){
+    return <div>로딩중입니다.</div>
+  }  
+  // console.log(profile);
+  const name = profile.name;
+  const id = profile.id;
+  const pwd = profile.pwd;
+  const birth = profile.birth;
+  const phone = profile.phone;
+  const companionName = profile.companionName;
+  const companionPhone = profile.companionPhone;
 
   const handleMenuClick = (menuItem) => {
     setSelectedMenuItem(menuItem);
@@ -38,7 +74,7 @@ function MyPage() {
   return (
     <div className="Mypage-container">
       <div className="my-backgrund">
-        <MyPageTop />
+        <MyPageTop name={name}/>
       </div>
       <div className="sub-menu">
         <div className="my-both">
@@ -50,11 +86,11 @@ function MyPage() {
             <div className="my-content-main">
               {selectedMenuItem === '내 정보' && (
                 <>
-                  <h2>이름 : {user.name}</h2>
-                  <h2>배우자 이름 : {user.spouse}</h2>
-                  <h2>나이 : {user.age}</h2>
-                  <h2>전화번호 : {user.phone}</h2>
-                  <h2>생일 : {user.bh}</h2>
+                  <h2>이름: {name}</h2>
+                  <h2>생일: {birth}</h2>
+                  <h2>전화번호: {phone}</h2>
+                  <h2>배우자이름: {companionName}</h2>
+                  <h2>배우자전화번호: {companionPhone}</h2>
                 </>
               )}
               {selectedMenuItem === '내정보 수정' && (

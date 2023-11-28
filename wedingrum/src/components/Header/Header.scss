@@ -122,7 +122,6 @@
   top: 45px;
   opacity: 0;
   position: absolute;
-  display: block;
   background: transparent;
   z-index: 1;
   flex-direction: column;
@@ -132,7 +131,7 @@
 
 
 #sub-menu li a{
-  float: left;
+  float: left; 
   padding: 8px 0;
   font-weight: 450!important;
   font-size: 14px!important;
